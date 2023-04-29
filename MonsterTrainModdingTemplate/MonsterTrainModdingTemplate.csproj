@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\workshop\content\1102190\2187468759\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\MonsterTrain_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>..\..\..\..\workshop\content\1102190\2187468759\BepInEx\core\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.Harmony">
+      <HintPath>..\..\..\..\workshop\content\1102190\2187468759\BepInEx\core\BepInEx.Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TrainworksModdingTools">
+      <HintPath>..\..\TrainworksModdingTools\TrainworksModdingTools.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TrainworksModdingToolsExtended">
+      <HintPath>..\..\TrainworksModdingToolsExtended\TrainworksModdingToolsExtended.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>..\..\MonsterTrain_Data\Managed\Unity.Addressables.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\MonsterTrain_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\MonsterTrain_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="CustomEffects\RoomModifiers\" />
+  </ItemGroup>
+
+</Project>
