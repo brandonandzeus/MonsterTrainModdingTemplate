@@ -27,17 +27,13 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                 Health = 20,
                 AssetPath = "assets/FrostFury_Character.png",
                 PriorityDraw = true,
-                StartingStatusEffects =
-                {
-                    new StatusEffectStackData {statusId = VanillaStatusEffectIDs.Regen, count = 3}
-                },
                 TriggerBuilders =
                 {
                     new CharacterTriggerDataBuilder
                     {
                         TriggerID = TriggerID,
                         Trigger = CharacterTriggerData.Trigger.OnAnyUnitDeathOnFloor,
-                        Description = "Gain [regen] <b>[effect0.status0.power]</b>",
+                        Description = "Gain <nobr>[regen] <b>[effect0.status0.power]</b></nobr>",
                         EffectBuilders =
                         {
                             new CardEffectDataBuilder
@@ -58,8 +54,12 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                     new RoomModifierDataBuilder
                     {
                         RoomModifierID = RoomModifierID,
+                        // Note tooltipTitle in game is tied to the RoomStateModifier class.
                         RoomModifierClassType = typeof(RoomStateStatusEffectDamageModifier),
-                        Description = "Units with [regen] deal 10 additional damage.",
+                        // TODO figure out plural localization library. 10 should be replaced by [codeint0]
+                        // Note the <br> as its used as the Cards Description.
+                        Description = "<br>Units with [regen] gain and deal [paramint] additional damage.",
+                        DescriptionInPlay = "Units with [regen] gain and deal [paramint] additional damage.",
                         ParamInt = 10,
                         ParamStatusEffects =
                         {
@@ -75,7 +75,6 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                 Name = "Frost Fury",
                 Cost = 2,
                 CardType = CardType.Monster,
-                OverrideDescriptionKey = "Units with [regen] deal 10 additional damage.",
                 Rarity = CollectableRarity.Common,
                 TargetsRoom = true,
                 Targetless = false,
