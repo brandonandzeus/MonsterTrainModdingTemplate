@@ -28,7 +28,7 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                     {
                         TriggerID = TriggerID,
                         Trigger = CharacterTriggerData.Trigger.OnHit,
-                        Description = "Gain <nobr><b>Damage Shield</b> <b>{[effect0.status0.power]}</b></nobr>",
+                        Description = "Gain <nobr>[damageshield] <b>[effect0.status0.power]</b></nobr>",
                         EffectBuilders =
                         {
                             new CardEffectDataBuilder

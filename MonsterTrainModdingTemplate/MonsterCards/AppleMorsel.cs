@@ -52,7 +52,7 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                     {
                         TriggerID = TriggerID,
                         Trigger = CharacterTriggerData.Trigger.OnEaten,
-                        Description = "Eater takes {[effect1.power]} damage and gains <nobr><b>Rage</b> <b>{[effect0.status0.power]}</b></nobr>",
+                        Description = "Eater takes [effect1.power] damage and gains <nobr>[rage] <b>[effect0.status0.power]</b></nobr>",
                         EffectBuilders =
                         {
                             addRage,

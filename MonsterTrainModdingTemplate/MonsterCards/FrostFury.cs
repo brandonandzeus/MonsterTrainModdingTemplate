@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Trainworks.BuildersV2;
 using Trainworks.ConstantsV2;
+using static CharacterTriggerData;
 
 namespace MonsterTrainModdingTemplate.MonsterCards
 {
@@ -12,6 +13,7 @@ namespace MonsterTrainModdingTemplate.MonsterCards
         public static readonly string ID = TestPlugin.CLANID + "_FrostFuryCard";
         public static readonly string CharID = TestPlugin.CLANID + "_FrostFuryCharacter";
         public static readonly string RoomModifierID = TestPlugin.CLANID + "_FrostFuryRoomModifier";
+        public static readonly string TriggerID = TestPlugin.CLANID + "_FrostFuryHarvest";
 
         public static void BuildAndRegister()
         {
@@ -27,7 +29,29 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                 PriorityDraw = true,
                 StartingStatusEffects =
                 {
-                    new StatusEffectStackData {statusId = VanillaStatusEffectIDs.Frostbite, count = 3}
+                    new StatusEffectStackData {statusId = VanillaStatusEffectIDs.Regen, count = 3}
+                },
+                TriggerBuilders =
+                {
+                    new CharacterTriggerDataBuilder
+                    {
+                        TriggerID = TriggerID,
+                        Trigger = CharacterTriggerData.Trigger.OnAnyUnitDeathOnFloor,
+                        Description = "Gain [regen] <b>[effect0.status0.power]</b>",
+                        EffectBuilders =
+                        {
+                            new CardEffectDataBuilder
+                            {
+                                EffectStateType = typeof(CardEffectAddStatusEffect),
+                                TargetMode = TargetMode.Self,
+                                TargetTeamType = Team.Type.Monsters,
+                                ParamStatusEffects =
+                                {
+                                    new StatusEffectStackData {statusId = VanillaStatusEffectIDs.Regen, count = 2},
+                                }
+                            }
+                        }
+                    }
                 },
                 RoomModifierBuilders =
                 {
@@ -35,11 +59,11 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                     {
                         RoomModifierID = RoomModifierID,
                         RoomModifierClassType = typeof(RoomStateStatusEffectDamageModifier),
-                        Description = "Units with [frostbite] take 10 more damage per stack.",
+                        Description = "Units with [regen] deal 10 additional damage.",
                         ParamInt = 10,
                         ParamStatusEffects =
                         {
-                            new StatusEffectStackData {statusId = VanillaStatusEffectIDs.Frostbite, count = 0},
+                            new StatusEffectStackData {statusId = VanillaStatusEffectIDs.Regen, count = 0},
                         }
                     }
                 }
@@ -51,7 +75,7 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                 Name = "Frost Fury",
                 Cost = 2,
                 CardType = CardType.Monster,
-                OverrideDescriptionKey = "[frostbite] deals 10 more damage per stack.",
+                OverrideDescriptionKey = "Units with [regen] deal 10 additional damage.",
                 Rarity = CollectableRarity.Common,
                 TargetsRoom = true,
                 Targetless = false,
