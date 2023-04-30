@@ -17,7 +17,6 @@ namespace MonsterTrainModdingTemplate.MonsterCards
 
         public static void BuildAndRegister()
         {
-            /// TODO the room modifier double dips.
             var character = new CharacterDataBuilder
             {
                 CharacterID = CharID,
@@ -54,11 +53,12 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                     new RoomModifierDataBuilder
                     {
                         RoomModifierID = RoomModifierID,
+
                         // Note tooltipTitle in game is tied to the RoomStateModifier class.
                         RoomModifierClassType = typeof(RoomStateStatusEffectDamageModifier),
-                        // TODO figure out plural localization library. 10 should be replaced by [codeint0]
-                        // Note the <br> as its used as the Cards Description.
-                        Description = "<br>Units with [regen] gain and deal [paramint] additional damage.",
+                        // Note the <br> as its used as part of the Card's Description to make it look nicer as
+                        // the trigger text appears on the same line otherwise.
+                        Description = "<br><br>Units with [regen] gain and deal [paramint] additional damage.",
                         DescriptionInPlay = "Units with [regen] gain and deal [paramint] additional damage.",
                         ParamInt = 10,
                         ParamStatusEffects =

@@ -27,11 +27,12 @@ namespace MonsterTrainModdingTemplate.Champions
             {
                 Champion = championCharacterBuilder,
                 ChampionIconPath = "assets/slimeboy-character.png",
-                StarterCardData = CustomCardManager.GetCardDataByID(VanillaCardIDs.AlphaFiend),
+                StarterCardID = VanillaCardIDs.AlphaFiend,
                 CardID = ID,
                 Name = "Slimeboy",
                 ClanID = Clan.ID,
-                AssetPath = "assets/slimeboy.png"
+                AssetPath = "assets/slimeboy.png",
+                UpgradeTree = new CardUpgradeTreeDataBuilder()
             }.BuildAndRegister(1);
         }
     }

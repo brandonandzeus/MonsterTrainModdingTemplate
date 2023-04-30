@@ -17,7 +17,7 @@ namespace MonsterTrainModdingTemplate.Relics
             {
                 CollectableRelicID = ID,
                 Name = "Ember Refunder",
-                Description = "Gain 1 ember for every 2 train steward in your deck.",
+                Description = "Gain 1 ember as long as you have at least 4 train stewards in your deck.",
                 RelicPoolIDs = { VanillaRelicPoolIDs.MegaRelicPool },
                 IconPath = "assets/ember.png",
                 ClanID = Clan.ID,
@@ -35,10 +35,10 @@ namespace MonsterTrainModdingTemplate.Relics
                                 ParamTrackedValue = CardStatistics.TrackedValueType.SubtypeInDeck,
                                 ParamCardType = CardStatistics.CardTypeTarget.Monster,
                                 ParamSubtype = VanillaSubtypeIDs.Steward,
-                                ParamTrackTriggerCount = true,
-                                AllowMultipleTriggersPerDuration = true,
-                                ParamInt = 2,
-                                ParamComparator = RelicEffectCondition.Comparator.GreaterThan,
+                                ParamTrackTriggerCount = false,
+                                AllowMultipleTriggersPerDuration = false,
+                                ParamInt = 4,
+                                ParamComparator = RelicEffectCondition.Comparator.Equal | RelicEffectCondition.Comparator.GreaterThan,
                             }
                         }
                     }

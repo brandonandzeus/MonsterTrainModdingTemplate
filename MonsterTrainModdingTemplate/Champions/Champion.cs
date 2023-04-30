@@ -29,8 +29,8 @@ namespace MonsterTrainModdingTemplate.Champions
             {
                 Champion = championCharacterBuilder,
                 ChampionIconPath = "assets/slimeboy-character.png",
-                //StarterCardData = CustomCardManager.GetCardDataByID(VanillaCardIDs.AlphaFiend),
-                StarterCardData = CustomCardManager.GetCardDataByID(Rustify.ID),
+                //StarterCardID = VanillaCardIDs.AlphaFiend,
+                StarterCardID = Rustify.ID,
                 CardID = ID,
                 Name = "Slimeboy",
                 ClanID = Clan.ID,
