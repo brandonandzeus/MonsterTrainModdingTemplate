@@ -17,7 +17,6 @@ namespace MonsterTrainModdingTemplate.HarmonyPatches
             //__instance.AddCardToDeck(CustomCardManager.GetCardDataByID(BlueEyesWhiteDragon.ID));
             //__instance.AddCardToDeck(CustomCardManager.GetCardDataByID(DragonCostume.ID));
             //__instance.AddCardToDeck(CustomCardManager.GetCardDataByID(PyreSharpener.ID));
-            //__instance.AddCardToDeck(CustomCardManager.GetCardDataByID(FrostFury.ID));
         }
     }
 }

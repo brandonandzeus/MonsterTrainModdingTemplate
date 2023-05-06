@@ -10,6 +10,10 @@ using MonsterTrainModdingTemplate.SpellCards;
 using Trainworks.Interfaces;
 using MonsterTrainModdingTemplate.Enhancers;
 using MonsterTrainModdingTemplate.StatusEffects;
+using System.Collections.Generic;
+using MonsterTrainModdingTemplate.CustomEffects.CardTraits;
+using Trainworks.BuildersV2;
+using MonsterTrainModdingTemplate.CustomEffects.RoomModifiers;
 
 namespace MonsterTrainModdingTemplate
 {
@@ -67,15 +71,25 @@ namespace MonsterTrainModdingTemplate
             BlueEyesWhiteDragon.BuildAndRegister();
             DragonCostume.BuildAndRegister();
             AppleMorsel.BuildAndRegister();
+            TrinityBurst.BuildAndRegister();
+            TrinityCharge.BuildAndRegister();
+            FrostFangFerox.BuildAndRegister();
             // Relics
             Wimpcicle.BuildAndRegister();
             EmberRefunder.BuildAndRegister();
+            EmberExchanger.BuildAndRegister();
             // Enhancers
             StealthyStone.BuildAndRegister();
             // StatusEffects
             Weaken.BuildAndRegister();
             // Banner
             ClanBanner.BuildAndRegister();
+
+            // Custom Trait Tooltips.
+            var traits = (List<string>)AccessTools.Field(typeof(TooltipContainer), "TraitsSupportedInTooltips").GetValue(null);
+            traits.Add(nameof(CardTraitTrinity));
+            // Custom RoomModifier TooltipTitle.
+            BuilderUtils.ImportStandardLocalization(nameof(RoomStateFrostbiteDamageModifier), "Bitter Cold");
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using Trainworks.BuildersV2;
 using Trainworks.ConstantsV2;
 using UnityEngine;
+using static RimLight;
 
 namespace MonsterTrainModdingTemplate.Enhancers
 {

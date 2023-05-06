@@ -11,7 +11,7 @@ namespace MonsterTrainModdingTemplate.HarmonyPatches
         {
             //__instance.AddRelic(CustomCollectableRelicManager.GetRelicDataByID(Wimpcicle.ID));
             //__instance.AddRelic(CustomCollectableRelicManager.GetRelicDataByID(EmberRefunder.ID));
-            
+            //__instance.AddRelic(CustomCollectableRelicManager.GetRelicDataByID(EmberExchanger.ID));
         }
     }
 }

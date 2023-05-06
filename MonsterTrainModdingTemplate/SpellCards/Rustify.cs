@@ -15,7 +15,7 @@ namespace MonsterTrainModdingTemplate.SpellCards
             {
                 CardID = ID,
                 Name = "Rustify",
-                Description = "Give everyone <nobr><b>Weaken</b> <b>[effect0.status0.power]</b></nobr>.",
+                Description = "Apply <nobr><b>Weaken</b> [effect0.status0.power]</nobr> to the front enemy unit.",
                 Cost = 1,
                 Rarity = CollectableRarity.Starter,
                 TargetsRoom = true,
