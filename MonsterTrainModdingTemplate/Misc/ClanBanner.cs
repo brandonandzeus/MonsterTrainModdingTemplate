@@ -34,7 +34,7 @@ namespace MonsterTrainModdingTemplate.Misc
                 },
                 Name = "Test Clan Banner",
                 Description = "Offers units from the illustrious Test Clan",
-                RequiredClass = CustomClassManager.GetClassDataByID(Clan.ID),
+                RequiredClassID = Clan.ID,
                 ControllerSelectedOutline = "assets/TestClanBanner_ControllerSelectedOutline.png",
                 FrozenSpritePath = "assets/TestClanBanner_Frozen.png",
                 EnabledSpritePath = "assets/TestClanBanner_Enabled.png",

@@ -29,7 +29,7 @@ namespace MonsterTrainModdingTemplate.SpellCards
 
             var onlyDamagingHealingSpells = new CardUpgradeMaskDataBuilder
             {
-                CardUpgradeMaskDataID = UpgradeMaskID,
+                CardUpgradeMaskID = UpgradeMaskID,
                 CardType = CardType.Spell,
                 RequiredCardEffectsOperator = CardUpgradeMaskDataBuilder.CompareOperator.Or,
                 RequiredCardEffects =

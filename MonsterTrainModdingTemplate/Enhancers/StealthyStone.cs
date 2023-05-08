@@ -19,7 +19,7 @@ namespace MonsterTrainModdingTemplate.Enhancers
         {
             var filter = new CardUpgradeMaskDataBuilder
             {
-                CardUpgradeMaskDataID = UpgradeMaskID,
+                CardUpgradeMaskID = UpgradeMaskID,
                 ExcludeNonAttackingMonsters = true,
                 CardType = CardType.Monster,
                 CostRange = new Vector2 {x = 0, y = 99},
