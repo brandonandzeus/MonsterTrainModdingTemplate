@@ -38,10 +38,20 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                             Health = 2500,
                             AttackDamage = 3000,
                             AssetPath = "assets/blueeyes_character.png",
-                            SubtypeKeys = { Subtypes.Dragon }
+                            SubtypeKeys = { Subtypes.Dragon },
+                            UnitSynthesisBuilder = new CardUpgradeDataBuilder
+                            {
+                                UpgradeID = "BlueEyesWhiteDragonSynthesis",
+                                UpgradeDescription = "+3000[attack] +2500[health]",
+                                HideUpgradeIconOnCard = true,
+                                UseUpgradeHighlightTextTags = true,
+                                BonusDamage = 3000,
+                                BonusHP = 2500,
+                            }
                         }
                     }
-                }
+                },
+                
             }.BuildAndRegister();
         }
     }
