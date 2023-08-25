@@ -22,11 +22,7 @@
       <Private>false</Private>
     </Reference>
     <Reference Include="TrainworksModdingTools">
-      <HintPath>..\..\TrainworksModdingTools\TrainworksModdingTools.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="TrainworksModdingToolsExtended">
-      <HintPath>..\..\TrainworksModdingToolsExtended\TrainworksModdingToolsExtended.dll</HintPath>
+      <HintPath>..\..\Trainworks2\TrainworksModdingTools.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="Unity.Addressables">
