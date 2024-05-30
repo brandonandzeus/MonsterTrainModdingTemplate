@@ -1,19 +1,19 @@
 ﻿using BepInEx;
 using HarmonyLib;
-using MonsterTrainModdingTemplate.Clans;
 using MonsterTrainModdingTemplate.Champions;
+using MonsterTrainModdingTemplate.Clans;
+using MonsterTrainModdingTemplate.CustomEffects.CardTraits;
+using MonsterTrainModdingTemplate.CustomEffects.RoomModifiers;
+using MonsterTrainModdingTemplate.Enhancers;
 using MonsterTrainModdingTemplate.Misc;
 using MonsterTrainModdingTemplate.ModifyExistingContent;
 using MonsterTrainModdingTemplate.MonsterCards;
 using MonsterTrainModdingTemplate.Relics;
 using MonsterTrainModdingTemplate.SpellCards;
-using Trainworks.Interfaces;
-using MonsterTrainModdingTemplate.Enhancers;
 using MonsterTrainModdingTemplate.StatusEffects;
 using System.Collections.Generic;
-using MonsterTrainModdingTemplate.CustomEffects.CardTraits;
 using Trainworks.BuildersV2;
-using MonsterTrainModdingTemplate.CustomEffects.RoomModifiers;
+using Trainworks.Interfaces;
 
 namespace MonsterTrainModdingTemplate
 {
@@ -74,6 +74,7 @@ namespace MonsterTrainModdingTemplate
             TrinityBurst.BuildAndRegister();
             TrinityCharge.BuildAndRegister();
             FrostFangFerox.BuildAndRegister();
+            EvergrowingCreeper.BuildAndRegister();
             // Relics
             Wimpcicle.BuildAndRegister();
             EmberRefunder.BuildAndRegister();
