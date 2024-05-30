@@ -1,10 +1,6 @@
 ﻿using MonsterTrainModdingTemplate.Clans;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Trainworks.BuildersV2;
 using Trainworks.ConstantsV2;
-using static RimLight;
 
 namespace MonsterTrainModdingTemplate.Relics
 {

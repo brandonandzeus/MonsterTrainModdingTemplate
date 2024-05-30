@@ -1,42 +1,36 @@
 ﻿using HarmonyLib;
-using ShinyShoe;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
 using static CombatManager;
-using static TargetHelper;
 
 namespace MonsterTrainModdingTemplate.HarmonyPatches
 {
     // Messy patch, completely rewrites frostbite just to change one thing. See below. Prefix return false patches should be avoided if possible.
-/*  [HarmonyPatch(typeof(StatusEffectPoisonState), "OnTriggered")]
-    class FrostbiteDamagePatchSetAttacker
-    {
-        public static bool Prefix(StatusEffectPoisonState __instance, ref IEnumerator __result, StatusEffectState.InputTriggerParams inputTriggerParams, StatusEffectState.OutputTriggerParams outputTriggerParams, CombatManager ___combatManager, CharacterState ___associatedCharacter, int ___stacks)
+    /*  [HarmonyPatch(typeof(StatusEffectPoisonState), "OnTriggered")]
+        class FrostbiteDamagePatchSetAttacker
         {
-            CoreSignals.DamageAppliedPlaySound.Dispatch(Damage.Type.Poison);
-
-            var GetDamageAmount = __instance.GetType().GetMethod("GetDamageAmount", BindingFlags.NonPublic | BindingFlags.Instance);
-            int damageAmount = (int) GetDamageAmount.Invoke(__instance, new object[] { ___stacks });
-
-            __result =  ___combatManager.ApplyDamageToTarget(damageAmount, ___associatedCharacter, new CombatManager.ApplyDamageToTargetParameters
+            public static bool Prefix(StatusEffectPoisonState __instance, ref IEnumerator __result, StatusEffectState.InputTriggerParams inputTriggerParams, StatusEffectState.OutputTriggerParams outputTriggerParams, CombatManager ___combatManager, CharacterState ___associatedCharacter, int ___stacks)
             {
-                damageType = Damage.Type.Poison,
-                selfTarget = ___associatedCharacter,
-                vfxAtLoc = __instance.GetSourceStatusEffectData()?.GetOnAffectedVFX(),
-                showDamageVfx = true,
-                relicState = inputTriggerParams.suppressingRelic
-            });
-            return false;
+                CoreSignals.DamageAppliedPlaySound.Dispatch(Damage.Type.Poison);
+
+                var GetDamageAmount = __instance.GetType().GetMethod("GetDamageAmount", BindingFlags.NonPublic | BindingFlags.Instance);
+                int damageAmount = (int) GetDamageAmount.Invoke(__instance, new object[] { ___stacks });
+
+                __result =  ___combatManager.ApplyDamageToTarget(damageAmount, ___associatedCharacter, new CombatManager.ApplyDamageToTargetParameters
+                {
+                    damageType = Damage.Type.Poison,
+                    selfTarget = ___associatedCharacter,
+                    vfxAtLoc = __instance.GetSourceStatusEffectData()?.GetOnAffectedVFX(),
+                    showDamageVfx = true,
+                    relicState = inputTriggerParams.suppressingRelic
+                });
+                return false;
+            }
         }
-    }
-*/
+    */
 
     [HarmonyPatch(typeof(CombatManager), nameof(CombatManager.ApplyDamageToTarget))]
-    class FrostbiteDamagePatchSetAttacker 
-    { 
+    class FrostbiteDamagePatchSetAttacker
+    {
         public static void Prefix(CharacterState target, ref ApplyDamageToTargetParameters parameters)
         {
             // Hack to set selfTarget for Frosbite Damage. This is required later when the damage is calculated to consider what RoomModifiers are in play.

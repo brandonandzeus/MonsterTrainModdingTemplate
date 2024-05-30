@@ -1,10 +1,8 @@
-﻿using MonsterTrainModdingTemplate;
-using MonsterTrainModdingTemplate.Clans;
+﻿using MonsterTrainModdingTemplate.Clans;
 using MonsterTrainModdingTemplate.SpellCards;
 using System.Collections.Generic;
 using Trainworks.BuildersV2;
 using Trainworks.ConstantsV2;
-using Trainworks.Managers;
 
 namespace MonsterTrainModdingTemplate.Champions
 {
@@ -29,7 +27,6 @@ namespace MonsterTrainModdingTemplate.Champions
             {
                 Champion = championCharacterBuilder,
                 ChampionIconPath = "assets/slimeboy-character.png",
-                //StarterCardID = VanillaCardIDs.AlphaFiend,
                 StarterCardID = Rustify.ID,
                 CardID = ID,
                 Name = "Slimeboy",
@@ -149,6 +146,5 @@ namespace MonsterTrainModdingTemplate.Champions
                 }
             };
         }
-
     }
 }

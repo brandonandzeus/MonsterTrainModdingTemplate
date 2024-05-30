@@ -1,7 +1,6 @@
 ﻿using HarmonyLib;
 using MonsterTrainModdingTemplate.MonsterCards;
 using MonsterTrainModdingTemplate.SpellCards;
-using Trainworks.ConstantsV2;
 using Trainworks.Managers;
 
 namespace MonsterTrainModdingTemplate.HarmonyPatches

@@ -1,11 +1,7 @@
 ﻿using MonsterTrainModdingTemplate.Clans;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Trainworks.BuildersV2;
 using Trainworks.ConstantsV2;
 using UnityEngine;
-using static RimLight;
 
 namespace MonsterTrainModdingTemplate.Enhancers
 {
@@ -22,7 +18,7 @@ namespace MonsterTrainModdingTemplate.Enhancers
                 CardUpgradeMaskID = UpgradeMaskID,
                 ExcludeNonAttackingMonsters = true,
                 CardType = CardType.Monster,
-                CostRange = new Vector2 {x = 0, y = 99},
+                CostRange = new Vector2 { x = 0, y = 99 },
             };
 
             var upgrade = new CardUpgradeDataBuilder

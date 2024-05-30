@@ -1,11 +1,7 @@
 ﻿using MonsterTrainModdingTemplate.Clans;
 using MonsterTrainModdingTemplate.CustomEffects.CardTraits;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Trainworks.BuildersV2;
 using Trainworks.Constants;
-using static RimLight;
 
 namespace MonsterTrainModdingTemplate.SpellCards
 {

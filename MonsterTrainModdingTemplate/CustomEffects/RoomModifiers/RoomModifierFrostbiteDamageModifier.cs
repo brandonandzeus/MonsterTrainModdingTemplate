@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-using Trainworks.ConstantsV2;
+﻿using Trainworks.ConstantsV2;
 using Trainworks.Managers;
-using UnityEngine;
 
 namespace MonsterTrainModdingTemplate.CustomEffects.RoomModifiers
 {

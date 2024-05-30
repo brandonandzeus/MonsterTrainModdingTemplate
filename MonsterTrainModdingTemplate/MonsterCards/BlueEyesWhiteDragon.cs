@@ -51,7 +51,6 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                         }
                     }
                 },
-                
             }.BuildAndRegister();
         }
     }

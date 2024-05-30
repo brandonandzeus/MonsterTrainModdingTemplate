@@ -1,6 +1,4 @@
 ﻿using HarmonyLib;
-using MonsterTrainModdingTemplate.Relics;
-using Trainworks.Managers;
 
 namespace MonsterTrainModdingTemplate.HarmonyPatches
 {

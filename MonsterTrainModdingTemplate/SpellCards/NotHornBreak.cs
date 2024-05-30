@@ -1,5 +1,4 @@
-﻿using MonsterTrainModdingTemplate;
-using MonsterTrainModdingTemplate.Clans;
+﻿using MonsterTrainModdingTemplate.Clans;
 using Trainworks.BuildersV2;
 using Trainworks.Constants;
 

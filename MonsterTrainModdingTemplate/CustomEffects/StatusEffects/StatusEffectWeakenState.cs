@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Trainworks.ConstantsV2;
+﻿using Trainworks.ConstantsV2;
 
 namespace MonsterTrainModdingTemplate.CustomEffects.StatusEffects
 {

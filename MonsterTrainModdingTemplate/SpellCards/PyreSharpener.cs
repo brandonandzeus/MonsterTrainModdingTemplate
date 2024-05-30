@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Trainworks.BuildersV2;
+﻿using Trainworks.BuildersV2;
 using Trainworks.ConstantsV2;
-using static CharacterTriggerData;
-using static RimLight;
 
 namespace MonsterTrainModdingTemplate.SpellCards
 {
@@ -28,7 +23,7 @@ namespace MonsterTrainModdingTemplate.SpellCards
                 TriggerID = TriggerID,
                 Trigger = CardTriggerType.OnUnplayed,
                 Description = "Apply +[effect0.power][attack] to your Pyre.",
-                CardEffectBuilders = {sharpenPyre},
+                CardEffectBuilders = { sharpenPyre },
             };
 
             new CardDataBuilder
@@ -44,7 +39,7 @@ namespace MonsterTrainModdingTemplate.SpellCards
                 // Image credit from Stockvault stockvault-melting-ice-cube294324.
                 AssetPath = "assets/pyresharpener.png",
                 CardPoolIDs = { VanillaCardPoolIDs.MegaPool },
-                TriggerBuilders = {effect},
+                TriggerBuilders = { effect },
                 TraitBuilders =
                 {
                     new CardTraitDataBuilder

@@ -1,13 +1,7 @@
 ﻿using MonsterTrainModdingTemplate.Clans;
 using MonsterTrainModdingTemplate.CustomEffects.CardEffects;
-using MonsterTrainModdingTemplate.CustomEffects.CardTraits;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Trainworks.BuildersV2;
 using Trainworks.Constants;
-using Trainworks.Managers;
-using static RimLight;
 
 namespace MonsterTrainModdingTemplate.SpellCards
 {
@@ -67,7 +61,7 @@ namespace MonsterTrainModdingTemplate.SpellCards
                         TraitStateType = typeof(CardTraitExhaustState),
                     }
                 },
-                
+
             }.BuildAndRegister();
         }
     }

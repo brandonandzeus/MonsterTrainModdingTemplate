@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Trainworks.BuildersV2;
+﻿using Trainworks.BuildersV2;
 using Trainworks.ConstantsV2;
-using static RimLight;
 
 namespace MonsterTrainModdingTemplate.SpellCards
 {
@@ -36,7 +32,7 @@ namespace MonsterTrainModdingTemplate.SpellCards
                 {
                     "CardEffectDamage",
                     "CardEffectHeal",
-                    "CardEffectHealAndDamageRelative" 
+                    "CardEffectHealAndDamageRelative"
                 },
                 DisallowedCardPools = { bannedCardPool },
             };
