@@ -56,7 +56,7 @@ namespace MonsterTrainModdingTemplate.ModifyExistingContent
             // Add 327 stacks of frostbite to the target using CardEffectDataBuilder.
             var frostbiteEffect = new CardEffectDataBuilder
             {
-                EffectStateType = VanillaCardEffectTypes.CardEffectAddStatusEffect,
+                EffectStateType = typeof(CardEffectAddStatusEffect),
                 TargetMode = TargetMode.LastTargetedCharacters,
                 ParamStatusEffects =
                 {
