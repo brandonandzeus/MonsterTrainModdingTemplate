@@ -47,7 +47,7 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                     {
                         TriggerID = TriggerID,
                         Trigger = CharacterTriggerData.Trigger.OnUnscaledSpawn,
-                        // No description text here.
+                        // No description text here. This one needs to be directly specified in the card.
                         EffectBuilders =
                         {
                             new CardEffectDataBuilder
