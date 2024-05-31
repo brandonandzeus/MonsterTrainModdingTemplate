@@ -10,6 +10,9 @@ using static CardStatistics;
 
 namespace MonsterTrainModdingTemplate.MonsterCards
 {
+    /// <summary>
+    /// Example of a monster card that has a scaling upgrade applied to itself.
+    /// </summary>
     public class EvergrowingCreeper
     {
         public static readonly string ID = TestPlugin.CLANID + "_EvergrowingCreeperCard";
@@ -130,15 +133,6 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                     }
                 }
             }.BuildAndRegister();
-        }
-    }
-
-    [HarmonyPatch(typeof(CardStatistics), "OnCharacterKilled")]
-    class Test
-    {
-        public static void Postfix(CharacterState deadCharacter, CardState attackingCard, TrackedValueType valueForTeam)
-        {
-            Trainworks.Trainworks.Log(deadCharacter + " " + attackingCard + " " + valueForTeam);
         }
     }
 }
