@@ -4,6 +4,9 @@ using Trainworks.ConstantsV2;
 
 namespace MonsterTrainModdingTemplate.MonsterCards
 {
+    /// <summary>
+    /// Example of a card with a Trigger and RoomModifier.
+    /// </summary>
     class FrostFury
     {
         public static readonly string ID = TestPlugin.CLANID + "_FrostFuryCard";

@@ -5,6 +5,9 @@ using Trainworks.Constants;
 
 namespace MonsterTrainModdingTemplate.MonsterCards
 {
+    /// <summary>
+    /// Example of a Monster Card with an Effect.
+    /// </summary>
     class DragonCostume
     {
         public static readonly string ID = TestPlugin.CLANID + "_DragonCostumeCard";

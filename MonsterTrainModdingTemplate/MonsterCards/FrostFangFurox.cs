@@ -3,9 +3,11 @@ using MonsterTrainModdingTemplate.CustomEffects.RoomModifiers;
 using Trainworks.BuildersV2;
 using Trainworks.ConstantsV2;
 
-
 namespace MonsterTrainModdingTemplate.MonsterCards
 {
+    /// <summary>
+    /// Example of a Monster Card with a Custom RoomModifier.
+    /// </summary>
     class FrostFangFerox
     {
         public static readonly string ID = TestPlugin.CLANID + "_FrostFangFeroxCard";

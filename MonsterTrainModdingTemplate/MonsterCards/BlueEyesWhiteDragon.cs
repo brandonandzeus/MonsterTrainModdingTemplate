@@ -5,6 +5,9 @@ using Trainworks.Constants;
 
 namespace MonsterTrainModdingTemplate.MonsterCards
 {
+    /// <summary>
+    /// Minimal example of how to create a Monster Card with an Essence.
+    /// </summary>
     class BlueEyesWhiteDragon
     {
         public static readonly string ID = TestPlugin.CLANID + "_BlueEyesCard";
