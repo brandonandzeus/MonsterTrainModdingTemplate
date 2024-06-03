@@ -71,6 +71,8 @@ namespace MonsterTrainModdingTemplate
             BlueEyesWhiteDragon.BuildAndRegister();
             DragonCostume.BuildAndRegister();
             AppleMorsel.BuildAndRegister();
+            ARock.BuildAndRegister();
+            ABoulder.BuildAndRegister();
             TrinityBurst.BuildAndRegister();
             TrinityCharge.BuildAndRegister();
             FrostFangFerox.BuildAndRegister();

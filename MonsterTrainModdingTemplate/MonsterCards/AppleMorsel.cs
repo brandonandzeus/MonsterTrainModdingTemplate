@@ -5,6 +5,9 @@ using Trainworks.ConstantsV2;
 
 namespace MonsterTrainModdingTemplate.MonsterCards
 {
+    /// <summary>
+    /// Example of how to create a new Morsel Unit and the Morsel Card Pools.
+    /// </summary>
     class AppleMorsel
     {
         public static readonly string ID = TestPlugin.CLANID + "_AppleMorselCard";
@@ -43,7 +46,7 @@ namespace MonsterTrainModdingTemplate.MonsterCards
                 Size = 1,
                 Health = 1,
                 AttackDamage = 0,
-                AssetPath = "assets/applemorsel_character.png",
+                AssetPath = "assets/applemorsel-character.png",
                 SubtypeKeys = { VanillaSubtypeIDs.Morsel },
                 PriorityDraw = false,
                 TriggerBuilders =
